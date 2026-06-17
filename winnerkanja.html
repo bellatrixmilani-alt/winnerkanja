@@ -146,8 +146,9 @@
 
     /* hero */
     header.hero {
-      padding: clamp(48px, 8vw, 96px) 0 clamp(44px, 6vw, 68px);
+      padding: clamp(64px, 10vw, 120px) 0 clamp(48px, 6vw, 72px);
       border-bottom: 1px solid var(--line);
+      text-align: center;
     }
 
     .eyebrow {
@@ -161,9 +162,11 @@
     }
 
     h1.title {
-      font-size: clamp(2.3rem, 5.2vw+.7rem, 5.5rem);
-      line-height: 1.03;
-      max-width: min(22ch, 100%);
+      font-size: clamp(2.6rem, 4.5vw, 4.4rem);
+      line-height: 1.05;
+      max-width: 18ch;
+      margin: 0 auto;
+      text-wrap: balance;
     }
 
     h1.title i {
@@ -174,9 +177,11 @@
 
     .hero-sub {
       margin-top: clamp(16px, 3vw, 22px);
-      max-width: 60ch;
+      max-width: 100%;
       color: var(--ink);
-      font-size: clamp(1rem, 1.2vw+.5rem, 1.15rem);
+      font-size: clamp(.95rem, 1vw+.4rem, 1.05rem);
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-sub b {
@@ -189,6 +194,7 @@
       flex-wrap: wrap;
       gap: 8px;
       margin-top: clamp(22px, 4vw, 32px);
+      justify-content: center;
     }
 
     .tag {
@@ -207,6 +213,7 @@
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
+      justify-content: center;
     }
 
     .btn-primary {
