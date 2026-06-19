@@ -1509,49 +1509,116 @@
             <h3 class="lead">Tell me about it.</h3>
             <p>Have a role, a project, or just a question in mind? Fill in the form and it comes straight to me — I
               usually reply within a day.</p>
+
           </div>
-          <div id="form-wrap">
-            <form onsubmit="sendMsg(event)">
-              <div class="fg"><label class="fl">Your name</label><input class="fi" required placeholder="Jane Doe">
+          <form onsubmit="sendMsg(event)">
+            <input type="hidden" name="access_key" value="0e008ec9-555d-4ce2-923e-9fc330d25341">
+            <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="fg"><label class="fl">Your name</label><input class="fi" name="name" required
+                placeholder="Jane Doe"></div>
+            <div class="fg"><label class="fl">Email</label><input type="email" class="fi" name="email" required
+                placeholder="jane@company.com"></div>
+            <div class="fg">
+              <label class="fl">What's this about?</label>
+              <select class="fi" name="subject">
+                <option value="" disabled selected>Choose one…</option>
+                <option>A remote role</option>
+                <option>A freelance project</option>
+                <option>VoltSync Dispatch</option>
+                <option>Kuku Farm Manager</option>
+                <option>Jape Fitness</option>
+                <option>Just saying hi</option>
+              </select>
+            </div>
+            <div class="fg"><label class="fl">Message</label><textarea class="fi" name="message" required
+                placeholder="What are you working on?"></textarea></div>
+            <button type="submit" class="btn-send">Send message</button>
+          </form>
+        </div>
+        <div style="margin-top:48px;padding-top:40px;border-top:1px solid rgba(255,255,255,.14);max-width:680px;">
+          <p
+            style="font-family:'JetBrains Mono',monospace;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.55);margin:0 0 22px;">
+            What happens after you reach out</p>
+
+          <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:20px;">
+            <li style="display:flex;gap:14px;align-items:flex-start;">
+              <span
+                style="flex:none;width:27px;height:27px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#fff;">1</span>
+              <div>
+                <p style="color:#fff;font-weight:500;font-size:.95rem;margin:0 0 3px;">You send a message</p>
+                <p style="color:rgba(255,255,255,.62);font-size:.88rem;line-height:1.55;margin:0;">Tell me the problem
+                  you're trying to solve, not the solution you think you need. A rough timeline and budget help, but
+                  aren't required.</p>
               </div>
-              <div class="fg"><label class="fl">Email</label><input type="email" class="fi" required
-                  placeholder="jane@company.com"></div>
-              <div class="fg">
-                <label class="fl">What's this about?</label>
-                <select class="fi">
-                  <option value="" disabled selected>Choose one…</option>
-                  <option>A remote role</option>
-                  <option>A freelance project</option>
-                  <option>VoltSync Dispatch</option>
-                  <option>Kuku Farm Manager</option>
-                  <option>Jape Fitness</option>
-                  <option>Just saying hi</option>
-                </select>
+            </li>
+
+            <li style="display:flex;gap:14px;align-items:flex-start;">
+              <span
+                style="flex:none;width:27px;height:27px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#fff;">2</span>
+              <div>
+                <p style="color:#fff;font-weight:500;font-size:.95rem;margin:0 0 3px;">We hop on a short call — free,
+                  ~30 min</p>
+                <p style="color:rgba(255,255,255,.62);font-size:.88rem;line-height:1.55;margin:0;">We work out whether
+                  I'm the right fit and what the work actually involves. No pressure to commit.</p>
               </div>
-              <div class="fg"><label class="fl">Message</label><textarea class="fi" required
-                  placeholder="What are you working on?"></textarea></div>
-              <button type="submit" class="btn-send">Send message</button>
-            </form>
-          </div>
+            </li>
+
+            <li style="display:flex;gap:14px;align-items:flex-start;">
+              <span
+                style="flex:none;width:27px;height:27px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#fff;">3</span>
+              <div>
+                <p style="color:#fff;font-weight:500;font-size:.95rem;margin:0 0 3px;">I send a simple proposal</p>
+                <!-- Leaning freelance? add "what it costs," before "and the terms." -->
+                <p style="color:rgba(255,255,255,.62);font-size:.88rem;line-height:1.55;margin:0;">Exactly what I'll do,
+                  what you'll get, how long it takes, and the terms. Nothing starts until you've approved it.</p>
+              </div>
+            </li>
+
+            <li style="display:flex;gap:14px;align-items:flex-start;">
+              <span
+                style="flex:none;width:27px;height:27px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#fff;">4</span>
+              <div>
+                <p style="color:#fff;font-weight:500;font-size:.95rem;margin:0 0 3px;">I design — and build it live, if
+                  you want it</p>
+                <p style="color:rgba(255,255,255,.62);font-size:.88rem;line-height:1.55;margin:0;">You see progress at
+                  clear checkpoints, so there are no surprises and you can steer early instead of at the end.</p>
+              </div>
+            </li>
+
+            <li style="display:flex;gap:14px;align-items:flex-start;">
+              <span
+                style="flex:none;width:27px;height:27px;border-radius:50%;border:1px solid rgba(255,255,255,.28);display:flex;align-items:center;justify-content:center;font-family:'JetBrains Mono',monospace;font-size:.78rem;color:#fff;">5</span>
+              <div>
+                <p style="color:#fff;font-weight:500;font-size:.95rem;margin:0 0 3px;">You get the finished work</p>
+                <p style="color:rgba(255,255,255,.62);font-size:.88rem;line-height:1.55;margin:0;">The designs, the
+                  working product if we built one, and what you need to keep moving after I hand off.</p>
+              </div>
+            </li>
+          </ol>
+
+          <p style="color:rgba(255,255,255,.5);font-size:.82rem;font-style:italic;margin:22px 0 0;">The first call costs
+            nothing and commits you to nothing.</p>
         </div>
       </div>
-    </section>
+  </div>
 
-    <div class="wrap">
-      <footer class="site-footer">
-        <nav class="foot-nav"><a onclick="navigate('about')">About</a><a onclick="goWork()">Work</a><a
-            href="https://www.linkedin.com/in/winner-kanja" target="_blank" rel="noopener">LinkedIn</a></nav>
+  </section>
 
-        <a class="foot-email"
-          href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=winnerkanjas@gmail.com&amp;su=Working%20with%20you&amp;body=Hi%20Winner%2C%0A%0AI%20found%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you.%20A%20few%20quick%20details%20to%20get%20us%20started%3A%0A%0A-%20Who%20I%20am%20/%20my%20company%3A%0A-%20What%20I%20need%20%28a%20role%2C%20a%20project%2C%20or%20freelance%29%3A%0A-%20Rough%20timeline%3A%0A-%20Budget%2C%20if%20any%3A%0A%0AAnything%20else%20you%27d%20want%20me%20to%20know%3A%0A%0ATalk%20soon%2C"
-          target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none"
-            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none">
-            <rect x="2" y="4" width="20" height="16" rx="2" />
-            <path d="m22 7-10 5L2 7" />
-          </svg>winnerkanjas@gmail.com</a>
-        <p class="foot-copy">© 2026 Winner Kanja</p>
-      </footer>
-    </div>
+  <div class="wrap">
+    <footer class="site-footer">
+      <nav class="foot-nav"><a onclick="navigate('about')">About</a><a onclick="goWork()">Work</a><a
+          href="https://www.linkedin.com/in/winner-kanja" target="_blank" rel="noopener">LinkedIn</a></nav>
+
+      <a class="foot-email"
+        href="https://mail.google.com/mail/?view=cm&amp;fs=1&amp;to=winnerkanjas@gmail.com&amp;su=Working%20with%20you&amp;body=Hi%20Winner%2C%0A%0AI%20found%20your%20portfolio%20and%20I%27d%20like%20to%20work%20with%20you.%20A%20few%20quick%20details%20to%20get%20us%20started%3A%0A%0A-%20Who%20I%20am%20/%20my%20company%3A%0A-%20What%20I%20need%20%28a%20role%2C%20a%20project%2C%20or%20freelance%29%3A%0A-%20Rough%20timeline%3A%0A-%20Budget%2C%20if%20any%3A%0A%0AAnything%20else%20you%27d%20want%20me%20to%20know%3A%0A%0ATalk%20soon%2C"
+        target="_blank" rel="noopener"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+          stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex:none">
+          <rect x="2" y="4" width="20" height="16" rx="2" />
+          <path d="m22 7-10 5L2 7" />
+        </svg>winnerkanjas@gmail.com</a>
+      <p class="foot-copy">© 2026 Winner Kanja</p>
+    </footer>
+  </div>
   </div>
 
   <!-- ===================== ABOUT ===================== -->
@@ -1642,11 +1709,12 @@
       <section class="case">
         <p class="kicker">case study 01 — logistics &amp; mobile workforce</p>
         <h2 class="case-title">VoltSync Dispatch</h2>
-        <p class="case-summary">Field-service companies — electricians, plumbers, HVAC, cleaners — live or die on one
-          number: how long between a customer's call and a worker on site. VoltSync is a dispatch tool built around that
-          number, for two very different users: a manager at a desk and a technician on a motorbike in Nairobi traffic.
-          It started as a self-set product brief; the target was to take a four-hour response time down to forty-five
-          minutes.</p>
+        <p class="case-summary">I redesigned how a small field-service company assigns work — replacing a gut-driven
+          WhatsApp-and-memory process with a product built around one number a manager can trust: the time from a
+          customer's call to a worker on site. The manager sees that number unmissable on the home screen; the
+          technician runs the whole job as a one-thumb flow they can complete on a ladder. It's designed and built to
+          hit the brief's target of cutting response time from four hours to forty-five minutes — a target, not yet a
+          measured result (see the end).</p>
 
         <div class="cta-group">
           <a href="https://voltsync-five.vercel.app/" target="_blank" rel="noopener" class="btn-primary">Open live
@@ -1667,7 +1735,7 @@
           </div>
           <div class="fact">
             <div class="fact-l">type</div>
-            <div class="fact-v">Self-set brief · live prototype</div>
+            <div class="fact-v">live prototype</div>
           </div>
           <div class="fact">
             <div class="fact-l">timeline</div>
@@ -1762,65 +1830,101 @@
 
         <div class="anatomy reveal">
           <div class="block">
-            <div class="block-l">the brief</div>
+            <div class="block-l">Who I designed for</div>
             <div>
-              <h4>One number, and the discipline to ignore everything else</h4>
-              <p>I wrote myself a tight brief: include a live map, ranked assignment, ETA and arrival alerts, a
-                technician mobile flow, time-tracking, and per-vehicle parts. Explicitly leave out a customer booking
-                portal, invoicing, social, and marketing. Holding that line was half the job — every cut feature was a
-                thing I wanted to design but that wouldn't move the response-time number. The only money in the app is
-                the contractor's own subscription; it never touches customer billing.</p>
+              <h4>Two users with opposite needs</h4>
+              <P>The whole design hinges on a single observation. This product has two users who want nearly opposite
+                things, sharing one system:
+                A manager at a desk needs density — the map, the queue, the SLA clocks, who's where — all at a glance.
+                A technician on a ladder, in traffic, in the rain needs the exact opposite: to do one thing at a time,
+                with one thumb, without reading a menu.
+                I designed them as two products on one spine, and almost every decision below comes from refusing to let
+                one user's needs bleed into the other's screen.</P>
             </div>
           </div>
 
           <div class="block">
-            <div class="block-l">the weight rule</div>
+            <div class="block-l">The design decisions that mattered</div>
             <div>
-              <h4>The detail I'm proudest of is a hard block</h4>
-              <p>A motorbike is faster through Nairobi traffic but can't carry a three-phase meter. So every part has a
-                real weight, and a boda is blocked outright from jobs over 12 kg — not warned, blocked. I tried a
-                warning first and then took it out: under pressure, a manager clicks past warnings. The fastest worker
-                isn't always the right one, and the system has to refuse the wrong call instead of leaving it to a busy
-                human.</p>
+              <h4>One number, designed to be impossible to miss</h4>
+              <p>The manager's home screen leads with the response-time figure against the forty-five-minute line —
+                green when the team is winning, red when it isn't. I deliberately pushed the full analytics deeper into
+                the product so that the one number the business actually runs on couldn't get lost in a wall of charts.
+                Deciding what not to put on that first screen was the real design work; the styling was the easy part.
+              </p>
+              <h4>A technician flow you can run with one thumb, on a ladder</h4>
+              <p>The technician side is a single forward path — queue, start, navigate, notify, arrive, check parts,
+                sign off — with no menu to reason about and no branching to get lost in. That linearity is a deliberate
+                response to the user's physical reality: they're occupied, standing on something, often one-handed.
+                Every place I could have added a choice, I asked whether a person halfway up a ladder could afford to
+                make it.
+                The field screens also run in Swahili — but only the screens a technician actually touches, error
+                messages included, not the manager's analytics. A half-translated interface loses someone at the first
+                English error message mid-task. Choosing where bilingual support had to be airtight, rather than
+                translating everything shallowly, was the judgment call.</p>
+              <h4>The weight rule blocks; it doesn't warn. </h4>
+              <p>A boda is faster through traffic but can't carry a three-phase meter. I built the warning version
+                first, then deleted it — at 9am with a queue backing up, a manager clicks straight past a warning. So
+                any job over 12kg hard-blocks boda assignment. This is error prevention over error messaging. Trade-off:
+                on a day with no van free, a heavy job can't be assigned to anyone nearby, even if delay is worse than
+                the weight risk. I decided a wrong assignment was the worse failure mode — but I'm not certain that's
+                right for every business.</P>
+              <h4>Designing the line between automation and human judgment</h4>
+              <P>The system suggests a technician, ranked by skill, distance, parts on hand, and what their vehicle can
+                carry. But the dispatcher can always overrule it — and I designed that override to ask for a single-tap
+                reason ("customer requested this tech," "specialist skill," "recommended tech unreachable").
+                The intent is twofold. It keeps the human visibly in charge, so they trust the tool instead of quietly
+                working around it. And it turns every override into a signal: if dispatchers keep overruling the
+                suggestion for the same reason, the recommendation is missing a factor, and the design has just told me
+                which screen to fix. The override is a feedback loop, not a cage.</P>
+              <h4>Arrival logs itself, so no one has to remember it. </h4>
+              <P>The response clock stops automatically when the technician crosses a geofence at the site — not when
+                they remember to tap "arrived." A self-reported arrival time is the first thing a busy person forgets,
+                or rounds in their own favour. Removing the manual step does two things at once: it takes one more task
+                off the technician on the ladder, and it protects the integrity of the number the manager is trusting.
+                I found the limits of that design the hard way. While building the prototype, I discovered the on-site
+                timer froze the instant a technician switched away to Google Maps — something that happens on every
+                single job. If I'd shipped that, the response-time number the whole design is built around would have
+                been quietly wrong, exactly the failure mode this feature exists to prevent. I rebuilt the timer logic
+                so it survives the technician leaving the app. It's not a glamorous fix, but it's the one I'd point to
+                first if asked what "testing your own design" actually looks like: building it revealed a flaw no amount
+                of static prototyping would have caught.</P>
             </div>
           </div>
 
           <div class="block">
-            <div class="block-l">the technician</div>
+            <div class="block-l">What actually shipped</div>
             <div>
-              <h4>A flow you can run with one thumb on a ladder</h4>
-              <p>The technician side is a single forward path: see your queue, start, navigate, tell the customer you're
-                coming, arrive, check parts, sign off. No menu to think about while you're standing next to a live
-                board. One thing I got wrong here: my first build ran the on-site timer on a tick counter, so it froze
-                the second a technician switched to Google Maps — which they do on every job. I rebuilt it on real
-                timestamps. If that clock is wrong, the headline response-time number is wrong, so it simply had to
-                hold.</p>
+              <p>A working, two-sided product, live on Vercel — not static frames. You can run both sides end to end:
+                assign a job and watch the live map, send a customer an ETA, complete a job with before/after photos and
+                a signature drawn on the screen, and see the response-time number update. I built it rather than mocked
+                it because shipping the real interactions is the only honest way to feel whether the technician flow
+                works one-handed, and whether the manager's one-number screen reads in a glance instead of a study.
+
+                What's still prototype, plainly: the customer messages, sign-in, and data storage are simulated
+                stand-ins for real services — the design decisions are all real and live, and only the production
+                plumbing is pending. The number I won't fake: "four hours to forty-five minutes" was the brief's target,
+                not something I've measured, and I won't dress it up as a result. Proving it needs one contractor, one
+                month, and a stopwatch — and I'd watch two figures: the real request-to-arrival time, and how often
+                dispatchers override the suggested technician, because a high override rate means my recommendation
+                design is wrong.
+                Every required piece from the brief is built and working — live map, route-aware assignment, customer
+                ETA and arrival messages, the technician flow, time tracking and completion, per-vehicle parts — and the
+                exclusions hold: no booking portal, no customer invoicing, no social, no marketing.
             </div>
           </div>
 
           <div class="block">
-            <div class="block-l">the business</div>
+            <div class="block-l">What I'd do differently</div>
             <div>
-              <h4>How it would actually make money — as I'd pitch it</h4>
-              <p>This is a per-seat subscription: the contractor pays a monthly fee per technician, billed through
-                M-Pesa because that's how a Nairobi business pays for anything. The wedge is the response-time number
-                itself — a contractor sees the value inside the first week of jobs, which is what makes a small operator
-                willing to pay at all. Acquisition is unglamorous and direct: outreach to contractors and word of mouth
-                inside a trade where everyone knows everyone. The churn risk is honest and specific — if the dashboard
-                doesn't visibly move that number early, they'll drift back to WhatsApp, so onboarding has to surface a
-                win fast. I'm flagging this as design-stage reasoning, not a validated model.</p>
-            </div>
-          </div>
-
-          <div class="block">
-            <div class="block-l">to ship it</div>
-            <div>
-              <h4>What's mocked, and what I'd build next</h4>
-              <p>Customer messages fire at a single simulated hook, sign-in is client-side, and data lives on the
-                device. To make it real I'd wire that hook to WhatsApp's Cloud API or Africa's Talking, move auth and
-                records server-side, and keep an offline queue in front so a dropped signal never loses a completion.
-                Then the pilot: one contractor, a month, a stopwatch, and the override rate — if managers constantly
-                override the ranking, the ranking is wrong and that tells me exactly what to fix.</p>
+              <p>Given a 2–3 day window, I built more than the brief asked for — multi-branch separation, device
+                heartbeat detection, barcode inventory, team dispatch. Most of it earns its place, but if I did it again
+                I'd hold the scope line harder and spend the saved hours on one real test instead of one more feature.
+                <strong>More importantly, I'd spend an hour with an actual dispatcher before designing the override flow
+                  at all</strong> — the reasons they'd give for overruling a suggestion would have shaped the ranking
+                logic from day one, instead of me inferring them from outside. The discipline I'm still learning isn't
+                what to build — it's what to leave out when the clock is the constraint.
+              </p>
             </div>
           </div>
         </div>
@@ -2095,8 +2199,9 @@
         <p class="case-summary">A Kenyan weight-loss coach with genuinely good results had them buried in a long,
           cluttered page. I clicked through from her Instagram link the way a real client would, and I got lost — I
           couldn't tell what to read first or find the price. For a coach charging premium fees, the site read cheaper
-          than the service. I rebuilt it into a clear, trust-first funnel that pays the way Kenyans actually pay.</p>
-
+          than the service. I rebuilt it into a clear, trust-first funnel that pays the way Kenyans actually pay. <em
+            style="color:var(--ink-soft);">(Self-initiated redesign — placeholder imagery stands in for the coach's real
+            photos; the UX structure and payment flow are the real work.)</em></p>
         <div class="cta-group">
           <a href="https://jp-plum-two.vercel.app/" target="_blank" rel="noopener" class="btn-primary">See the redesign
             (after) ↗</a>
@@ -2130,10 +2235,8 @@
             visual weight on one endless scroll, so nothing landed and the price was nowhere obvious. My job wasn't to
             rewrite her story; it was to give that story an order a nervous first-time visitor could follow without
             getting lost, and to make the site feel as premium as the programme it sells.</p>
-          <p style="color:var(--ink-soft);font-style:italic;">Worth being straight about: this is a portfolio redesign.
-            I used placeholder imagery in place of the coach's real photos while I worked the UX — the structure, the
-            flow, and the payment design are the real work here, and the before/after are both live so you can judge the
-            change yourself.</p>
+          <p style="color:var(--ink-soft);font-style:italic;">Both versions are live, so you can judge the structural
+            change yourself rather than take my word for it.</p>
         </div>
 
         <div class="numbers reveal">
@@ -2403,9 +2506,30 @@
       b.classList.toggle('show', (currentView !== 'home') && (window.scrollY > 200));
     }
     window.addEventListener('scroll', updateFloatBack, { passive: true });
-    function sendMsg(e) {
+    async function sendMsg(e) {
       e.preventDefault();
-      document.getElementById('form-wrap').innerHTML = '<div class="sent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Message sent! I\'ll get back to you within a day.</span></div>';
+      const form = e.target;
+      const btn = form.querySelector('.btn-send');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Accept': 'application/json' },
+          body: new FormData(form)
+        });
+        const data = await res.json();
+        if (data.success) {
+          document.getElementById('form-wrap').innerHTML =
+            '<div class="sent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Message sent! I\'ll get back to you within a day.</span></div>';
+        } else {
+          throw new Error(data.message || 'failed');
+        }
+      } catch (err) {
+        btn.textContent = 'Send message';
+        btn.disabled = false;
+        alert('Something went wrong — please email winnerkanjas@gmail.com directly.');
+      }
     }
     function initReveal() {
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
