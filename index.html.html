@@ -2520,8 +2520,7 @@
         });
         const data = await res.json();
         if (data.success) {
-          document.getElementById('form-wrap').innerHTML =
-            '<div class="sent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Message sent! I\'ll get back to you within a day.</span></div>';
+          form.innerHTML = '<div class="sent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Message sent! I\'ll get back to you within a day.</span></div>';
         } else {
           throw new Error(data.message || 'failed');
         }
@@ -2530,8 +2529,7 @@
         btn.disabled = false;
         alert('Something went wrong — please email winnerkanjas@gmail.com directly.');
       }
-    }
-    function initReveal() {
+    } function initReveal() {
       if (window.matchMedia && window.matchMedia('(prefers-reduced-motion:reduce)').matches) return;
       if (!('IntersectionObserver' in window)) return;
       var io = new IntersectionObserver(function (en) { en.forEach(function (x) { if (x.isIntersecting) { x.target.classList.add('in'); io.unobserve(x.target); } }); }, { threshold: .1, rootMargin: '0px 0px -40px 0px' });
