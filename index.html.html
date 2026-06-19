@@ -2509,6 +2509,7 @@
     async function sendMsg(e) {
       e.preventDefault();
       const form = e.target;
+      const original = form.innerHTML;            // remember the form so we can bring it back
       const btn = form.querySelector('.btn-send');
       btn.textContent = 'Sending…';
       btn.disabled = true;
@@ -2521,6 +2522,7 @@
         const data = await res.json();
         if (data.success) {
           form.innerHTML = '<div class="sent"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg><span>Message sent! I\'ll get back to you within a day.</span></div>';
+          setTimeout(() => { form.innerHTML = original; }, 5000);   // bring the form back after 5s
         } else {
           throw new Error(data.message || 'failed');
         }
